@@ -1,5 +1,5 @@
 import json
-
+dictionary ={'criticidad':[1,],'eficiencia':[5,1,2,4],'agilidad':[3,2,4,5],'innovacion':[3,2,5,1],'criterio':[5,4,5,2,1,4,3,2,5,1,4]}
 
 try:
 	file = open('users.json')
@@ -41,35 +41,47 @@ def calculate_element(table:str,aspect:int,dic:dict,limits:dict):
 	
 	if table == 'criticidad':
 		if total < limits['second']:
-			return 'Muy Baja'
+			return (total,'Muy Baja')
 
 		elif total < limits['third'] or total == limits['second']:
-			return 'Baja'
+			return (total,'Baja')
 
 		elif total < limits['fourth'] or total == limits['third']:
-			return 'Media'
+			return (total,'Media')
 
 		elif total < limits['fifth'] or total == limits['fourth']:
-			return 'Alta'
+			return (total,'Alta')
 
 		else:
-			return 'Muy Alta'
+			return (total,'Muy Alta')
 
 	else:
 		if total < limits['second']:
-			return 'No se toma en cuenta'
+			return (total,'No se toma en cuenta')
 
 		elif total < limits['third'] or total == limits['second']:
-			return 'Poco importante'
+			return (total,'Poco importante')
 
 		elif total < limits['fourth'] or total == limits['third']:
-			return 'Medianamente importante'
+			return (total,'Medianamente importante')
 
 		elif total < limits['fifth'] or total == limits['fourth']:
-			return 'Sumamente importante'
+			return (total,'Sumamente importante')
 
 		else:
-			return 'Indispensable'
+			return (total,'Indispensable')
 
+def calculate_total(users,limits):
+	final_result ={}
+	user_dic = users 
+	limit = limits
+	for categoria in dictionary:
+		result_list=[]
+		for i in range(len(dictionary[categoria])):
+			result =calculate_element(categoria,i,user_dic,limit)
+			result_list.append(result)
 
+		final_result[categoria]=result_list
+
+	return final_result
 
