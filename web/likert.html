@@ -1,298 +1,361 @@
- 
 <!DOCTYPE html>
 <html>
-	
-	<head>
-		<title>Likert</title>
-		<meta charset="UTF-8">
-		<link rel="stylesheet" href="node_modules/vue-material/dist/vue-material.css">
-		<link rel="stylesheet" href="node_modules/vue-material/dist/theme/black-green-light.css">
-	
-	</head>
 
-	<body>
+<head>
+	<title>Likert</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="node_modules/vue-material/dist/vue-material.css">
+	<link rel="stylesheet" href="node_modules/vue-material/dist/theme/black-green-light.css">
 
-		<div id='app'>
-			
+</head>
 
-			<script type='text/javascript' src='/eel.js'></script>
-			<script type='text/javascript'>
-			
+<body>
 
-			</script>	
+	<div id='app'>
 
 
-			<template>
-				<md-tabs class="md-primary" md-alignment="fixed" >
-				<md-tab id="main" md-label="Main" >
-					<h2 style="text-align: center" >Encuesta para Identificar los Objetivos del Negocio Específicos del Proyecto</h2>
-					
+		<script type='text/javascript' src='/eel.js'></script>
+		<script type='text/javascript'>
+		</script>
+
+		<template>
+			<md-tabs class="md-primary" md-alignment="fixed">
+				<md-tab id="main" md-label="Main">
+
+					<h2 style="text-align: center">Encuesta para Identificar los Objetivos del Negocio Específicos del Proyecto</h2>
+
 					<md-field>
 						<label>Nombre del encuestado</label>
 						<md-input v-model="name" required></md-input>
 					</md-field>
 
 					<br>
-					
-					<h3>I- Considera usted la criticidad de la Nube Privada (NP) a diseñar/rediseñar en el cumplimiento de la misión de la entidad que representa:
-					<select v-model="criticity" >
+
+					<h3>I- Considera usted la criticidad de la Nube Privada (NP) a diseñar/rediseñar en el cumplimiento de la misión de la entidad
+						que representa:
+						<select v-model="criticity">
 							<option value="1">Muy Baja</option>
 							<option value="2">Baja</option>
 							<option value="3">Media</option>
 							<option value="4">Alta</option>
 							<option value="5">Muy Alta</option>
-						</select></h3>
-						<br>
-					<h3>II- El cumplimiento de los siguientes objetivos del negocio como resultado de la ejecución del proyecto es considerado por usted:</h3>
-						<h4>Eficiencia</h4>
-						<p>1- Reducir el consumo de energía eléctrica.</p>
-							<p>	<select v-model="eficiency_0" >
-										<option value="1">No se toma en cuenta</option>
-										<option value="2">Poco importante</option>
-										<option value="3">Medianamente importante</option>
-										<option value="4">Sumamente importante</option>
-										<option value="5">Muy Alta</option>
-									</select>
-						</p>
-						<p>2- Aumentar los ingresos</p>
-						<p>	<select v-model="eficiency_1" >
-									<option value="1">No se toma en cuenta</option>
-									<option value="2">Poco importante</option>
-									<option value="3">Medianamente importante</option>
-									<option value="4">Sumamente importante</option>
-									<option value="5">Muy Alta</option>
-								</select>
-					</p>
-					<p>3- Reducir los Gastos de Operaciones (OPEX1) de la infraestructura de las Tecnologías de la Información y las Comunicaciones (TIC).
-					</p><p>	<select v-model="eficiency_2" >
-								<option value="1">No se toma en cuenta</option>
-								<option value="2">Poco importante</option>
-								<option value="3">Medianamente importante</option>
-								<option value="4">Sumamente importante</option>
-								<option value="5">Muy Alta</option>
-							</select>
-				</p>
-				<p>4- Aumentar el número de servicios y usuarios, manteniendo la Calidad del Servicio (QoS1) y la Calidad de Experiencia (QoE2).
-				</p><p>	<select v-model="eficiency_3" >
+						</select>
+					</h3>
+					<br>
+					<h3>II- El cumplimiento de los siguientes objetivos del negocio como resultado de la ejecución del proyecto es considerado
+						por usted:</h3>
+					<h4>Eficiencia</h4>
+					<p>1- Reducir el consumo de energía eléctrica.</p>
+					<p>
+						<select v-model="eficiency_0">
 							<option value="1">No se toma en cuenta</option>
 							<option value="2">Poco importante</option>
 							<option value="3">Medianamente importante</option>
 							<option value="4">Sumamente importante</option>
 							<option value="5">Muy Alta</option>
 						</select>
-			</p>
-				<br>
-				<h4>Agilidad</h4>
-						<p>1- Puesta a punto de las aplicaciones en producción en cortos y/o flexibles períodos de tiempo.</p>
-							<p>	<select v-model="agility_0" >
-										<option value="1">No se toma en cuenta</option>
-										<option value="2">Poco importante</option>
-										<option value="3">Medianamente importante</option>
-										<option value="4">Sumamente importante</option>
-										<option value="5">Muy Alta</option>
-									</select>
-						</p>
-						<p>2- Respuesta rápida a la demanda de los usuarios.</p>
-						<p>	<select v-model="agility_1" >
-									<option value="1">No se toma en cuenta</option>
-									<option value="2">Poco importante</option>
-									<option value="3">Medianamente importante</option>
-									<option value="4">Sumamente importante</option>
-									<option value="5">Muy Alta</option>
-								</select>
+					</p>
+					<p>2- Aumentar los ingresos</p>
+					<p>
+						<select v-model="eficiency_1">
+							<option value="1">No se toma en cuenta</option>
+							<option value="2">Poco importante</option>
+							<option value="3">Medianamente importante</option>
+							<option value="4">Sumamente importante</option>
+							<option value="5">Muy Alta</option>
+						</select>
+					</p>
+					<p>3- Reducir los Gastos de Operaciones (OPEX1) de la infraestructura de las Tecnologías de la Información y las Comunicaciones
+						(TIC).
+					</p>
+					<p>
+						<select v-model="eficiency_2">
+							<option value="1">No se toma en cuenta</option>
+							<option value="2">Poco importante</option>
+							<option value="3">Medianamente importante</option>
+							<option value="4">Sumamente importante</option>
+							<option value="5">Muy Alta</option>
+						</select>
+					</p>
+					<p>4- Aumentar el número de servicios y usuarios, manteniendo la Calidad del Servicio (QoS1) y la Calidad de Experiencia
+						(QoE2).
+					</p>
+					<p>
+						<select v-model="eficiency_3">
+							<option value="1">No se toma en cuenta</option>
+							<option value="2">Poco importante</option>
+							<option value="3">Medianamente importante</option>
+							<option value="4">Sumamente importante</option>
+							<option value="5">Muy Alta</option>
+						</select>
+					</p>
+					<br>
+					<h4>Agilidad</h4>
+					<p>1- Puesta a punto de las aplicaciones en producción en cortos y/o flexibles períodos de tiempo.</p>
+					<p>
+						<select v-model="agility_0">
+							<option value="1">No se toma en cuenta</option>
+							<option value="2">Poco importante</option>
+							<option value="3">Medianamente importante</option>
+							<option value="4">Sumamente importante</option>
+							<option value="5">Muy Alta</option>
+						</select>
+					</p>
+					<p>2- Respuesta rápida a la demanda de los usuarios.</p>
+					<p>
+						<select v-model="agility_1">
+							<option value="1">No se toma en cuenta</option>
+							<option value="2">Poco importante</option>
+							<option value="3">Medianamente importante</option>
+							<option value="4">Sumamente importante</option>
+							<option value="5">Muy Alta</option>
+						</select>
 					</p>
 					<p>3- Aprovisionamiento automatizado y ágil de los recursos de cómputo y almacenamiento.
-					</p><p>	<select v-model="agility_2" >
-								<option value="1">No se toma en cuenta</option>
-								<option value="2">Poco importante</option>
-								<option value="3">Medianamente importante</option>
-								<option value="4">Sumamente importante</option>
-								<option value="5">Muy Alta</option>
-							</select>
-						</p>
-												<p>4- Acelerar el flujo productivo
-												</p><p>	<select v-model="agility_3" >
-															<option value="1">No se toma en cuenta</option>
-															<option value="2">Poco importante</option>
-															<option value="3">Medianamente importante</option>
-															<option value="4">Sumamente importante</option>
-															<option value="5">Muy Alta</option>
-														</select></p>
-				
-				<br>
-						<h4>Innovacion</h4>
-						<p>1- Desarrollar nuevas aplicaciones que permitan soportar operaciones del negocio sofisticadas y satisfacer las expectativas de los usuarios finales.</p>
-							<p>	<select v-model="innovation_0" >
-										<option value="1">No se toma en cuenta</option>
-										<option value="2">Poco importante</option>
-										<option value="3">Medianamente importante</option>
-										<option value="4">Sumamente importante</option>
-										<option value="5">Muy Alta</option>
-									</select>
-						</p>
-						<p>2- Actualizar la infraestructura TIC en función de los niveles de satisfacción de los usuarios y el patrón de la demanda y uso de los recursos</p>
-						<p>	<select v-model="innovation_1" >
-									<option value="1">No se toma en cuenta</option>
-									<option value="2">Poco importante</option>
-									<option value="3">Medianamente importante</option>
-									<option value="4">Sumamente importante</option>
-									<option value="5">Muy Alta</option>
-								</select>
+					</p>
+					<p>
+						<select v-model="agility_2">
+							<option value="1">No se toma en cuenta</option>
+							<option value="2">Poco importante</option>
+							<option value="3">Medianamente importante</option>
+							<option value="4">Sumamente importante</option>
+							<option value="5">Muy Alta</option>
+						</select>
+					</p>
+					<p>4- Acelerar el flujo productivo
+					</p>
+					<p>
+						<select v-model="agility_3">
+							<option value="1">No se toma en cuenta</option>
+							<option value="2">Poco importante</option>
+							<option value="3">Medianamente importante</option>
+							<option value="4">Sumamente importante</option>
+							<option value="5">Muy Alta</option>
+						</select>
+					</p>
+
+					<br>
+					<h4>Innovacion</h4>
+					<p>1- Desarrollar nuevas aplicaciones que permitan soportar operaciones del negocio sofisticadas y satisfacer las expectativas
+						de los usuarios finales.</p>
+					<p>
+						<select v-model="innovation_0">
+							<option value="1">No se toma en cuenta</option>
+							<option value="2">Poco importante</option>
+							<option value="3">Medianamente importante</option>
+							<option value="4">Sumamente importante</option>
+							<option value="5">Muy Alta</option>
+						</select>
+					</p>
+					<p>2- Actualizar la infraestructura TIC en función de los niveles de satisfacción de los usuarios y el patrón de la demanda
+						y uso de los recursos</p>
+					<p>
+						<select v-model="innovation_1">
+							<option value="1">No se toma en cuenta</option>
+							<option value="2">Poco importante</option>
+							<option value="3">Medianamente importante</option>
+							<option value="4">Sumamente importante</option>
+							<option value="5">Muy Alta</option>
+						</select>
 					</p>
 					<p>3- Informatizar los procesos de producción.
-					</p><p>	<select v-model="innovation_2" >
-								<option value="1">No se toma en cuenta</option>
-								<option value="2">Poco importante</option>
-								<option value="3">Medianamente importante</option>
-								<option value="4">Sumamente importante</option>
-								<option value="5">Muy Alta</option>
-							</select>
-				</p>
-				<p>4- Estandarizar la infraestructura TIC.
-					</p><p>	<select v-model="innovation_3" >
-								<option value="1">No se toma en cuenta</option>
-								<option value="2">Poco importante</option>
-								<option value="3">Medianamente importante</option>
-								<option value="4">Sumamente importante</option>
-								<option value="5">Muy Alta</option>
-							</select></p>
+					</p>
+					<p>
+						<select v-model="innovation_2">
+							<option value="1">No se toma en cuenta</option>
+							<option value="2">Poco importante</option>
+							<option value="3">Medianamente importante</option>
+							<option value="4">Sumamente importante</option>
+							<option value="5">Muy Alta</option>
+						</select>
+					</p>
+					<p>4- Estandarizar la infraestructura TIC.
+					</p>
+					<p>
+						<select v-model="innovation_3">
+							<option value="1">No se toma en cuenta</option>
+							<option value="2">Poco importante</option>
+							<option value="3">Medianamente importante</option>
+							<option value="4">Sumamente importante</option>
+							<option value="5">Muy Alta</option>
+						</select>
+					</p>
 
-							<br>
+					<br>
 
-				<h3>III- El cumplimiento de los siguientes criterios para evaluar de exitoso el proyecto es considerado por usted:</h3>
-				<h4>Criterio</h4>
-				<p>1- El proyecto es completado en tiempo.
-				</p><p>	<select v-model="criteria_0" >
-				<option value="1">No se toma en cuenta</option>
-				<option value="2">Poco importante</option>
-				<option value="3">Medianamente importante</option>
-				<option value="4">Sumamente importante</option>
-				<option value="5">Muy Alta</option>
-				</select></p>
+					<h3>III- El cumplimiento de los siguientes criterios para evaluar de exitoso el proyecto es considerado por usted:</h3>
+					<h4>Criterio</h4>
+					<p>1- El proyecto es completado en tiempo.
+					</p>
+					<p>
+						<select v-model="criteria_0">
+							<option value="1">No se toma en cuenta</option>
+							<option value="2">Poco importante</option>
+							<option value="3">Medianamente importante</option>
+							<option value="4">Sumamente importante</option>
+							<option value="5">Muy Alta</option>
+						</select>
+					</p>
 
-				<p>2- El proyecto es completado con el presupuesto asignado.
-				</p><p>	<select v-model="criteria_1" >
-				<option value="1">No se toma en cuenta</option>
-				<option value="2">Poco importante</option>
-				<option value="3">Medianamente importante</option>
-				<option value="4">Sumamente importante</option>
-				<option value="5">Muy Alta</option>
-				</select></p>
+					<p>2- El proyecto es completado con el presupuesto asignado.
+					</p>
+					<p>
+						<select v-model="criteria_1">
+							<option value="1">No se toma en cuenta</option>
+							<option value="2">Poco importante</option>
+							<option value="3">Medianamente importante</option>
+							<option value="4">Sumamente importante</option>
+							<option value="5">Muy Alta</option>
+						</select>
+					</p>
 
-				<p>3- Se cumplen los Requerimientos Funcionales.
-				</p><p>	<select v-model="criteria_2" >
-				<option value="1">No se toma en cuenta</option>
-				<option value="2">Poco importante</option>
-				<option value="3">Medianamente importante</option>
-				<option value="4">Sumamente importante</option>
-				<option value="5">Muy Alta</option>
-				</select></p>
+					<p>3- Se cumplen los Requerimientos Funcionales.
+					</p>
+					<p>
+						<select v-model="criteria_2">
+							<option value="1">No se toma en cuenta</option>
+							<option value="2">Poco importante</option>
+							<option value="3">Medianamente importante</option>
+							<option value="4">Sumamente importante</option>
+							<option value="5">Muy Alta</option>
+						</select>
+					</p>
 
-				<p>4- Se cumplen los Requerimientos no Funcionales.
-				</p><p>	<select v-model="criteria_3" >
-				<option value="1">No se toma en cuenta</option>
-				<option value="2">Poco importante</option>
-				<option value="3">Medianamente importante</option>
-				<option value="4">Sumamente importante</option>
-				<option value="5">Muy Alta</option>
-				</select></p>
+					<p>4- Se cumplen los Requerimientos no Funcionales.
+					</p>
+					<p>
+						<select v-model="criteria_3">
+							<option value="1">No se toma en cuenta</option>
+							<option value="2">Poco importante</option>
+							<option value="3">Medianamente importante</option>
+							<option value="4">Sumamente importante</option>
+							<option value="5">Muy Alta</option>
+						</select>
+					</p>
 
-				<p>5- Se cumple exitosamente las acciones de capacitación necesarias.
-				</p><p>	<select v-model="criteria_4" >
-				<option value="1">No se toma en cuenta</option>
-				<option value="2">Poco importante</option>
-				<option value="3">Medianamente importante</option>
-				<option value="4">Sumamente importante</option>
-				<option value="5">Muy Alta</option>
-				</select></p>
+					<p>5- Se cumple exitosamente las acciones de capacitación necesarias.
+					</p>
+					<p>
+						<select v-model="criteria_4">
+							<option value="1">No se toma en cuenta</option>
+							<option value="2">Poco importante</option>
+							<option value="3">Medianamente importante</option>
+							<option value="4">Sumamente importante</option>
+							<option value="5">Muy Alta</option>
+						</select>
+					</p>
 
-				<p>6- Se cumple el objetivo general del proyecto.
-				</p><p>	<select v-model="criteria_5" >
-				<option value="1">No se toma en cuenta</option>
-				<option value="2">Poco importante</option>
-				<option value="3">Medianamente importante</option>
-				<option value="4">Sumamente importante</option>
-				<option value="5">Muy Alta</option>
-				</select></p>
+					<p>6- Se cumple el objetivo general del proyecto.
+					</p>
+					<p>
+						<select v-model="criteria_5">
+							<option value="1">No se toma en cuenta</option>
+							<option value="2">Poco importante</option>
+							<option value="3">Medianamente importante</option>
+							<option value="4">Sumamente importante</option>
+							<option value="5">Muy Alta</option>
+						</select>
+					</p>
 
-				<p>7- Se cumplen los objetivos específicos del proyecto.
-				</p><p>	<select v-model="criteria_6" >
-				<option value="1">No se toma en cuenta</option>
-				<option value="2">Poco importante</option>
-				<option value="3">Medianamente importante</option>
-				<option value="4">Sumamente importante</option>
-				<option value="5">Muy Alta</option>
-				</select></p>
+					<p>7- Se cumplen los objetivos específicos del proyecto.
+					</p>
+					<p>
+						<select v-model="criteria_6">
+							<option value="1">No se toma en cuenta</option>
+							<option value="2">Poco importante</option>
+							<option value="3">Medianamente importante</option>
+							<option value="4">Sumamente importante</option>
+							<option value="5">Muy Alta</option>
+						</select>
+					</p>
 
-				<p>8- Se logra la satisfacción de los usuarios finales.
-				</p><p>	<select v-model="criteria_7" >
-				<option value="1">No se toma en cuenta</option>
-				<option value="2">Poco importante</option>
-				<option value="3">Medianamente importante</option>
-				<option value="4">Sumamente importante</option>
-				<option value="5">Muy Alta</option>
-				</select></p>
+					<p>8- Se logra la satisfacción de los usuarios finales.
+					</p>
+					<p>
+						<select v-model="criteria_7">
+							<option value="1">No se toma en cuenta</option>
+							<option value="2">Poco importante</option>
+							<option value="3">Medianamente importante</option>
+							<option value="4">Sumamente importante</option>
+							<option value="5">Muy Alta</option>
+						</select>
+					</p>
 
-				<p>9- Se emplea la tecnología acordada.
-				</p><p>	<select v-model="criteria_8" >
-				<option value="1">No se toma en cuenta</option>
-				<option value="2">Poco importante</option>
-				<option value="3">Medianamente importante</option>
-				<option value="4">Sumamente importante</option>
-				<option value="5">Muy Alta</option>
-				</select></p>
+					<p>9- Se emplea la tecnología acordada.
+					</p>
+					<p>
+						<select v-model="criteria_8">
+							<option value="1">No se toma en cuenta</option>
+							<option value="2">Poco importante</option>
+							<option value="3">Medianamente importante</option>
+							<option value="4">Sumamente importante</option>
+							<option value="5">Muy Alta</option>
+						</select>
+					</p>
 
-				<p>10- Se cumple la estrategia y política de seguridad.
-				</p><p>	<select v-model="criteria_9" >
-				<option value="1">No se toma en cuenta</option>
-				<option value="2">Poco importante</option>
-				<option value="3">Medianamente importante</option>
-				<option value="4">Sumamente importante</option>
-				<option value="5">Muy Alta</option>
-				</select></p>
+					<p>10- Se cumple la estrategia y política de seguridad.
+					</p>
+					<p>
+						<select v-model="criteria_9">
+							<option value="1">No se toma en cuenta</option>
+							<option value="2">Poco importante</option>
+							<option value="3">Medianamente importante</option>
+							<option value="4">Sumamente importante</option>
+							<option value="5">Muy Alta</option>
+						</select>
+					</p>
 
-				<p>11- Se cumplen las regulaciones y políticas del país y de la entidad.
-				</p><p>	<select v-model="criteria_10" >
-				<option value="1">No se toma en cuenta</option>
-				<option value="2">Poco importante</option>
-				<option value="3">Medianamente importante</option>
-				<option value="4">Sumamente importante</option>
-				<option value="5">Muy Alta</option>
-				</select></p>
+					<p>11- Se cumplen las regulaciones y políticas del país y de la entidad.
+					</p>
+					<p>
+						<select v-model="criteria_10">
+							<option value="1">No se toma en cuenta</option>
+							<option value="2">Poco importante</option>
+							<option value="3">Medianamente importante</option>
+							<option value="4">Sumamente importante</option>
+							<option value="5">Muy Alta</option>
+						</select>
+					</p>
 
-				<br>
+					<br>
 
-				<h3>IV- Existencia de determinado plan estratégico en relación a las Tecnologías de la Información y las Comunicaciones (TIC) en la entidad:  </h3>
-				<md-checkbox v-model="boolean">Si</md-checkbox>
+					<h3>IV- Existencia de determinado plan estratégico en relación a las Tecnologías de la Información y las Comunicaciones
+						(TIC) en la entidad: </h3>
+					<md-checkbox v-model="boolean">Si</md-checkbox>
 
-				<br>
+					<br>
 
-				<h3>V- Existencia de determinado proyecto que se relacione de forma parcial o total con el diseño/rediseño de la Nube Privada: </h3>
-				<md-checkbox v-model="boolean0">Si</md-checkbox>
+					<h3>V- Existencia de determinado proyecto que se relacione de forma parcial o total con el diseño/rediseño de la Nube Privada:
+					</h3>
+					<md-checkbox v-model="boolean0">Si</md-checkbox>
 
 
-				<div>
-						<span style="margin-left:40%" ><md-button href="#" @click="" class="md-raised md-primary">Inicio</md-button><md-button class="md-raised md-primary" @click="save()" >Guardar</md-button></span>
-				</div>
-				
+					<div>
+						<span style="margin-left:40%">
+							<md-button href="#" @click="" class="md-raised md-primary">Inicio</md-button>
+							<md-button class="md-raised md-primary" @click="save(name,{'criticidad':criticity,'eficiencia':[eficiency_0,eficiency_1,eficiency_2,eficiency_3],'agilidad':[agility_0,agility_1,agility_2,agility_3],'innovacion':[innovation_0,innovation_1,innovation_2,innovation_3],'criterio':[criteria_0,criteria_1,criteria_2,criteria_3,criteria_4,criteria_5,criteria_6,criteria_7,criteria_8,criteria_9,criteria_10]})">Guardar</md-button>
+						</span>
+					</div>
+					{{ existing_users}}
 
 
 
 				</md-tab>
-				<md-tab id="results" md-label="Results" >
-				
-
+				<md-tab id="results" md-label="Results" @click="load">
+					{{ existing_users}}
 				</md-tab>
-				</md-tabs>
-			</template>
+			</md-tabs>
+		</template>
 
 
-<script src="node_modules/vue/dist/vue.min.js"></script>
-<script src="node_modules/vue-material/dist/vue-material.min.js"></script>
-<script src="node_modules/app.js"></script>
+		<script src="node_modules/vue/dist/vue.min.js"></script>
+		<script src="node_modules/vue-material/dist/vue-material.min.js"></script>
+
+		<script src="node_modules/app.js"></script>
 
 
 
-		</div>
-	</body>
+	</div>
+</body>
+
 </html>

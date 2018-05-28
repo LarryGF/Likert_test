@@ -1,34 +1,21 @@
+import eel
 import json
+from functions import *
+
+eel.init('web')
 
 
-class User(object):
-	'''One user's worth of Likert's data '''
-	
-	# name = str
-	criticidad = int
-	eficiencia = list
-	agilidad = list
-	innovacion = list
-	criterio = list
-#dic = {'name':'','criticidad':'','eficiencia':'','agilidad':'','innovacion':'','criterio':''}
-#name,criticidad,eficiencia,agilidad,innovacion,criterio
-	
-	def __init__(self,dic:dict):
-		
-		# self.name=dic['name']
-		self.criticidad=dic['criticidad']
-		self.eficiencia=dic['eficiencia']
-		self.agilidad=dic['agilidad']
-		self.innovacion=dic['innovacion']
-		self.criterio=dic['criterio']
+@eel.expose
+def load():
+	data = load_data()
+	return data
 
 
+@eel.expose
+def save(name, dic, existing):
+	# print(name, dic, existing)
+	result =  new_user(name, dic, existing)
+	print(result)
 
 
-	def save(self,dic:dict):
-		file = open('users.json','w')
-		json.dump(dic,file)
-		file.close()
-
-
-
+eel.start('likert.html')
