@@ -56,6 +56,9 @@ def calculate_element(table: str, aspect: int, dic: dict, limits: dict):
 		user_dic = users[user]
 		aspect_list = user_dic[table]
 		value = aspect_list[aspect]
+		if type(value) == str:
+			value = int(value)
+		print(type(value))
 		total = total + value
 
 	if table == 'criticidad':
@@ -102,5 +105,10 @@ def calculate_total(users, limits):
 			result_list.append(result)
 
 		final_result[categoria] = result_list
-
+	print(final_result)
 	return final_result
+
+def send_table():
+	existing_users = load_data()
+	limits = calculate_limits(existing_users)
+	total = calculate_total(existing_users,limits)
