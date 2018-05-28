@@ -341,34 +341,36 @@
 
 
 				</md-tab>
-				<md-tab id="results" md-label="Results" @click="load">
-				<template>
-				<div>
-				<md-table v-model="tabla" md-sort="user" md-sort-order="asc" md-card md-fixed-header>
-				<md-table-toolbar>
-				<h1 class="md-title">Eficiencia</h1>
-				</md-table-toolbar>
-
+				<md-tab id="results" md-label="Results" @click="load_table">
+					
+					<template>
+						<div>
+								
+							<md-table v-model="tabla" md-sort="user" md-sort-order="asc" md-card md-fixed-header>
+								<md-table-toolbar>
+									<h1 class="md-title">Eficiencia</h1>
+								</md-table-toolbar>
+								
 				<md-table-row slot="md-table-row" slot-scope="{ item }">
-				<md-table-cell md-label="Usuario" md-sort-by="user">{{ item.user }}</md-table-cell>
-				<md-table-cell md-label="1" md-sort-by="efic1">{{ item.efic1 }}</md-table-cell>
-				<md-table-cell md-label="2" md-sort-by="efic2">{{ item.efic2 }}</md-table-cell>
+					<md-table-cell md-label="Usuario" md-sort-by="user">{{ item.user }}</md-table-cell>
+					<md-table-cell md-label="1" md-sort-by="efic1">{{ item.efic1 }}</md-table-cell>
+					<md-table-cell md-label="2" md-sort-by="efic2">{{ item.efic2 }}</md-table-cell>
 				<md-table-cell md-label="3" md-sort-by="efic3">{{ item.efic3 }}</md-table-cell>
 				<md-table-cell md-label="4" md-sort-by="efic4">{{ item.efic4 }}</md-table-cell>
 				</md-table-row>
-				</md-table>
+			</md-table>
 				</div>
-				</template>
+			</template>
 				<template>
-				<div>
-				<md-table v-model="tabla" md-sort="user" md-sort-order="asc" md-card md-fixed-header>
-				<md-table-toolbar>
-				<h1 class="md-title">Agilidad</h1>
+					<div>
+						<md-table v-model="tabla" md-sort="user" md-sort-order="asc" md-card md-fixed-header>
+							<md-table-toolbar>
+								<h1 class="md-title">Agilidad</h1>
 				</md-table-toolbar>
-
+				
 				<md-table-row slot="md-table-row" slot-scope="{ item }">
-				<md-table-cell md-label="Usuario" md-sort-by="user">{{ item.user }}</md-table-cell>
-
+					<md-table-cell md-label="Usuario" md-sort-by="user">{{ item.user }}</md-table-cell>
+					
 				<md-table-cell md-label="1" md-sort-by="agil1">{{ item.agil1 }}</md-table-cell>
 				<md-table-cell md-label="2" md-sort-by="agil2">{{ item.agil2 }}</md-table-cell>
 				<md-table-cell md-label="3" md-sort-by="agil3">{{ item.agil3 }}</md-table-cell>
@@ -421,7 +423,7 @@
 						</div>
 						</template>
 
-
+						
 				</md-tab>
 			</md-tabs>
 		</template>

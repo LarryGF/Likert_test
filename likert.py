@@ -21,7 +21,12 @@ def save(name, dic):
 def delete(user):
 	result = remove_user(user)
 	return result
-	
+
+@eel.expose
+def load_table():
+	table = send_table()
+	print(table)
+	return table
 
 
-eel.start('likert.html')
+eel.start('likert1.html')
