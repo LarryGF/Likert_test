@@ -12,9 +12,9 @@ def load():
 
 
 @eel.expose
-def save(name, dic, existing):
+def save(name, dic):
 	# print(name, dic, existing)
-	result =  new_user(name, dic, existing)
+	result =  new_user(name, dic)
 	print(result)
 
 

@@ -19,15 +19,13 @@ def calculate_limits(exisiting_users):
 	return limits
 
 
-def new_user(name: str, dic: dict, exisiting_users):
-	print(name)
-	print(dic)
+def new_user(name: str, dic: dict):
+	existing_users= load_data()
+	existing_users[name] = dic
 	print(existing_users)
-	exisiting_users[name] = dic
-	print(exisiting_users)
 	# return exisiting_users
-	save_data(exisiting_users)
-	# return 'Success'
+	save_data(existing_users)
+	return 'Success'
 
 
 def load_data():
