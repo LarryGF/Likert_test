@@ -18,7 +18,15 @@ def calculate_limits(exisiting_users):
 			  'third': val*3, 'fourth': val*4, 'fifth': val*5}
 	return limits
 
-
+def remove_user(user):
+	try:	
+		existing_users = load_data()
+		existing_users.pop(user)
+		save_data(existing_users)
+	except Exception as e:
+		return e
+	return 'Succes'
+	
 def new_user(name: str, dic: dict):
 	existing_users= load_data()
 	existing_users[name] = dic

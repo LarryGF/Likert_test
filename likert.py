@@ -15,7 +15,13 @@ def load():
 def save(name, dic):
 	# print(name, dic, existing)
 	result =  new_user(name, dic)
-	print(result)
+	return result
+
+@eel.expose
+def delete(user):
+	result = remove_user(user)
+	return result
+	
 
 
 eel.start('likert.html')
