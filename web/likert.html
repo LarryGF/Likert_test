@@ -23,7 +23,7 @@
 
 
 			<template>
-				<md-tabs class="md-primary" md-alignment="centered" >
+				<md-tabs class="md-primary" md-alignment="fixed" >
 				<md-tab id="main" md-label="Main" >
 					<h2 style="text-align: center" >Encuesta para Identificar los Objetivos del Negocio Específicos del Proyecto</h2>
 					
@@ -32,6 +32,7 @@
 						<md-input v-model="name" required></md-input>
 					</md-field>
 
+					<br>
 					
 					<h3>I- Considera usted la criticidad de la Nube Privada (NP) a diseñar/rediseñar en el cumplimiento de la misión de la entidad que representa:
 					<select v-model="criticity" >
@@ -258,11 +259,22 @@
 				<option value="4">Sumamente importante</option>
 				<option value="5">Muy Alta</option>
 				</select></p>
-							
+
+				<br>
+
+				<h3>IV- Existencia de determinado plan estratégico en relación a las Tecnologías de la Información y las Comunicaciones (TIC) en la entidad:  </h3>
+				<md-checkbox v-model="boolean">Si</md-checkbox>
+
+				<br>
+
+				<h3>V- Existencia de determinado proyecto que se relacione de forma parcial o total con el diseño/rediseño de la Nube Privada: </h3>
+				<md-checkbox v-model="boolean0">Si</md-checkbox>
 
 
-
-
+				<div>
+						<span style="margin-left:40%" ><md-button href="#" @click="" class="md-raised md-primary">Inicio</md-button><md-button class="md-raised md-primary" @click="save()" >Guardar</md-button></span>
+				</div>
+				
 
 
 
