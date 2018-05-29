@@ -18,7 +18,7 @@
 		<script type='text/javascript'>
 		</script>
 
-		<template>
+	
 			<md-tabs class="md-primary" md-alignment="fixed">
 				<md-tab id="main" md-label="Main">
 
@@ -343,90 +343,89 @@
 				</md-tab>
 				<md-tab id="results" md-label="Results" @click="load_table">
 					
-					<template>
-						<div>
-								
-							<md-table v-model="tabla" md-sort="user" md-sort-order="asc" md-card md-fixed-header>
-								<md-table-toolbar>
-									<h1 class="md-title">Eficiencia</h1>
-								</md-table-toolbar>
-								
-				<md-table-row slot="md-table-row" slot-scope="{ item }">
-					<md-table-cell md-label="Usuario" md-sort-by="user">{{ item.user }}</md-table-cell>
-					<md-table-cell md-label="1" md-sort-by="efic1">{{ item.efic1 }}</md-table-cell>
-					<md-table-cell md-label="2" md-sort-by="efic2">{{ item.efic2 }}</md-table-cell>
-				<md-table-cell md-label="3" md-sort-by="efic3">{{ item.efic3 }}</md-table-cell>
-				<md-table-cell md-label="4" md-sort-by="efic4">{{ item.efic4 }}</md-table-cell>
-				</md-table-row>
-			</md-table>
-				</div>
-			</template>
-				<template>
-					<div>
-						<md-table v-model="tabla" md-sort="user" md-sort-order="asc" md-card md-fixed-header>
-							<md-table-toolbar>
-								<h1 class="md-title">Agilidad</h1>
-				</md-table-toolbar>
 				
-				<md-table-row slot="md-table-row" slot-scope="{ item }">
-					<md-table-cell md-label="Usuario" md-sort-by="user">{{ item.user }}</md-table-cell>
-					
-				<md-table-cell md-label="1" md-sort-by="agil1">{{ item.agil1 }}</md-table-cell>
-				<md-table-cell md-label="2" md-sort-by="agil2">{{ item.agil2 }}</md-table-cell>
-				<md-table-cell md-label="3" md-sort-by="agil3">{{ item.agil3 }}</md-table-cell>
-				<md-table-cell md-label="4" md-sort-by="agil4">{{ item.agil4 }}</md-table-cell>
-				</md-table-row>
-				</md-table>
-				</div>
-				</template>
-				<template>
-				<div>
-				<md-table v-model="tabla" md-sort="user" md-sort-order="asc" md-card md-fixed-header>
-				<md-table-toolbar>
-				<h1 class="md-title">Innovacion</h1>
-				</md-table-toolbar>
+   
+   
+<div class="md-layout">
+ <div class="md-layout-item">
+<md-table v-model="tabla" md-sort="name" md-sort-order="asc" md-card md-fixed-header>
+<md-table-toolbar>
+<h1 class="md-title">Eficiencia</h1>
+</md-table-toolbar>
 
-				<md-table-row slot="md-table-row" slot-scope="{ item }">
-				<md-table-cell md-label="Usuario" md-sort-by="user">{{ item.user }}</md-table-cell>
+<md-table-row slot="md-table-row" slot-scope="{ item }">
+<md-table-cell md-label="Usuario" md-sort-by="name">{{ item.name }}</md-table-cell>
+<md-table-cell md-label="1" md-sort-by="eficiency_0">{{ item.eficiency_0 }}</md-table-cell>
+<md-table-cell md-label="2" md-sort-by="eficiency_1">{{ item.eficiency_1 }}</md-table-cell>
+<md-table-cell md-label="3" md-sort-by="eficiency_2">{{ item.eficiency_2 }}</md-table-cell>
+<md-table-cell md-label="4" md-sort-by="eficiency_3">{{ item.eficiency_3 }}</md-table-cell>
+</md-table-row>
+</md-table>
+</div>
+<div class="md-layout-item">
+<md-table v-model="tabla" md-sort="name" md-sort-order="asc" md-card md-fixed-header>
+<md-table-toolbar>
+<h1 class="md-title">Agilidad</h1>
+</md-table-toolbar>
 
-				<md-table-cell md-label="1" md-sort-by="innov1">{{ item.innov1 }}</md-table-cell>
-				<md-table-cell md-label="2" md-sort-by="innov2">{{ item.innov2 }}</md-table-cell>
-				<md-table-cell md-label="3" md-sort-by="innov3">{{ item.innov3 }}</md-table-cell>
-				<md-table-cell md-label="4" md-sort-by="innov4">{{ item.innov4 }}</md-table-cell>
-				</md-table-row>
-				</md-table>
-				</div>
-				</template>
-				<template>
-						<div>
-						<md-table v-model="tabla" md-sort="user" md-sort-order="asc" md-card md-fixed-header>
-						<md-table-toolbar>
-						<h1 class="md-title">Criterio</h1>
-						</md-table-toolbar>
-		
-						<md-table-row slot="md-table-row" slot-scope="{ item }">
-						<md-table-cell md-label="Usuario" md-sort-by="user">{{ item.user }}</md-table-cell>
-		
-						<md-table-cell md-label="1" md-sort-by="crit1">{{ item.crit1 }}</md-table-cell>
-						<md-table-cell md-label="2" md-sort-by="crit2">{{ item.crit2 }}</md-table-cell>
-						<md-table-cell md-label="3" md-sort-by="crit3">{{ item.crit3 }}</md-table-cell>
-						<md-table-cell md-label="4" md-sort-by="crit4">{{ item.crit4 }}</md-table-cell>
-						<md-table-cell md-label="5" md-sort-by="crit5">{{ item.crit5 }}</md-table-cell>
-						<md-table-cell md-label="6" md-sort-by="crit6">{{ item.crit6 }}</md-table-cell>
-						<md-table-cell md-label="7" md-sort-by="crit7">{{ item.crit7 }}</md-table-cell>
-						<md-table-cell md-label="8" md-sort-by="crit8">{{ item.crit8 }}</md-table-cell>
-						<md-table-cell md-label="9" md-sort-by="crit9">{{ item.crit9 }}</md-table-cell>
-						<md-table-cell md-label="10" md-sort-by="crit10">{{ item.crit10 }}</md-table-cell>
-						<md-table-cell md-label="11" md-sort-by="crit11">{{ item.crit11}}</md-table-cell>
-						</md-table-row>
-						</md-table>
-						</div>
-						</template>
+<md-table-row slot="md-table-row" slot-scope="{ item }">
+<md-table-cell md-label="Usuario" md-sort-by="name">{{ item.name }}</md-table-cell>
 
-						
+<md-table-cell md-label="1" md-sort-by="agility_0">{{ item.agility_0 }}</md-table-cell>
+<md-table-cell md-label="2" md-sort-by="agility_1">{{ item.agility_1 }}</md-table-cell>
+<md-table-cell md-label="3" md-sort-by="agility_2">{{ item.agility_2 }}</md-table-cell>
+<md-table-cell md-label="4" md-sort-by="agility_3">{{ item.agility_3 }}</md-table-cell>
+</md-table-row>
+</md-table>
+</div>
+</div>
+
+
+
+<md-table v-model="tabla" md-sort="name" md-sort-order="asc" md-card md-fixed-header>
+<md-table-toolbar>
+<h1 class="md-title">Innovacion</h1>
+</md-table-toolbar>
+
+<md-table-row slot="md-table-row" slot-scope="{ item }">
+<md-table-cell md-label="Usuario" md-sort-by="name">{{ item.name }}</md-table-cell>
+
+<md-table-cell md-label="1" md-sort-by="innovation_0">{{ item.innovation_0 }}</md-table-cell>
+<md-table-cell md-label="2" md-sort-by="innovation_1">{{ item.innovation_1 }}</md-table-cell>
+<md-table-cell md-label="3" md-sort-by="innovation_2">{{ item.innovation_2 }}</md-table-cell>
+<md-table-cell md-label="4" md-sort-by="innovation_3">{{ item.innovation_3 }}</md-table-cell>
+</md-table-row>
+</md-table>
+
+
+<md-table v-model="tabla" md-sort="name" md-sort-order="asc" md-card >
+<md-table-toolbar>
+<h1 class="md-title">Criterio</h1>
+</md-table-toolbar>
+
+<md-table-row slot="md-table-row" slot-scope="{ item }" >
+<md-table-cell md-label="Usuario" md-sort-by="name">{{ item.name }}</md-table-cell>
+
+<md-table-cell md-label="1" md-sort-by="criteria_0">{{ item.criteria_0 }}</md-table-cell>
+<md-table-cell md-label="2" md-sort-by="criteria_1">{{ item.criteria_1 }}</md-table-cell>
+<md-table-cell md-label="3" md-sort-by="criteria_2">{{ item.criteria_2 }}</md-table-cell>
+<md-table-cell md-label="4" md-sort-by="criteria_3">{{ item.criteria_3 }}</md-table-cell>
+<md-table-cell md-label="5" md-sort-by="criteria_4">{{ item.criteria_4 }}</md-table-cell>
+<md-table-cell md-label="6" md-sort-by="criteria_5">{{ item.criteria_5 }}</md-table-cell>
+<md-table-cell md-label="7" md-sort-by="criteria_6">{{ item.criteria_6 }}</md-table-cell>
+<md-table-cell md-label="8" md-sort-by="criteria_7">{{ item.criteria_7 }}</md-table-cell>
+<md-table-cell md-label="9" md-sort-by="criteria_8">{{ item.criteria_8 }}</md-table-cell>
+<md-table-cell md-label="10" md-sort-by="criteria_9">{{ item.criteria_9 }}</md-table-cell>
+<md-table-cell md-label="11" md-sort-by="criteria_10">{{ item.criteria_10}}</md-table-cell>
+</md-table-row>
+</md-table>
+
+
+
+			
 				</md-tab>
 			</md-tabs>
-		</template>
+		
 
 
 		<script src="node_modules/vue/dist/vue.min.js"></script>

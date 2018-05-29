@@ -142,7 +142,36 @@ def send_table():
 		row['criteria_9']=dic['criterio'][9]
 		row['criteria_10']=dic['criterio'][10]
 		list_to_send.append(row)
-	print(list_to_send)
+		row = {}
+	# print(total)
+	row['name'] = 'Sumatoria'
+	dic = total
+	row['criticity']=str(dic['criticidad'][0][1]) +' ('+str(dic['criticidad'][0][0])+')'
+	row['eficiency_0']=str(dic['eficiencia'][0][1]) +' ('+str(dic['eficiencia'][0][0])+')'
+	row['eficiency_1']=str(dic['eficiencia'][1][1]) +' ('+str(dic['eficiencia'][1][0])+')'
+	row['eficiency_2']=str(dic['eficiencia'][2][1]) +' ('+str(dic['eficiencia'][2][0])+')'
+	row['eficiency_3']=str(dic['eficiencia'][3][1]) +' ('+str(dic['eficiencia'][3][0])+')'
+	row['agility_0']=str(dic['agilidad'][0][1]) +' ('+str(dic['agilidad'][0][0])+')'
+	row['agility_1']=str(dic['agilidad'][1][1]) +' ('+str(dic['agilidad'][1][0])+')'
+	row['agility_2']=str(dic['agilidad'][2][1]) +' ('+str(dic['agilidad'][2][0])+')'
+	row['agility_3']=str(dic['agilidad'][3][1]) +' ('+str(dic['agilidad'][3][0])+')'
+	row['innovation_0']=str(dic['innovacion'][0][1]) +' ('+str(dic['innovacion'][0][0])+')'
+	row['innovation_1']=str(dic['innovacion'][1][1]) +' ('+str(dic['innovacion'][1][0])+')'
+	row['innovation_2']=str(dic['innovacion'][2][1]) +' ('+str(dic['innovacion'][2][0])+')'
+	row['innovation_3']=str(dic['innovacion'][3][1]) +' ('+str(dic['innovacion'][3][0])+')'
+	row['criteria_0']=str(dic['criterio'][0][1]) +' ('+str(dic['criterio'][0][0])+')'
+	row['criteria_1']=str(dic['criterio'][1][1]) +' ('+str(dic['criterio'][1][0])+')'
+	row['criteria_2']=str(dic['criterio'][2][1]) +' ('+str(dic['criterio'][2][0])+')'
+	row['criteria_3']=str(dic['criterio'][3][1]) +' ('+str(dic['criterio'][3][0])+')'
+	row['criteria_4']=str(dic['criterio'][4][1]) +' ('+str(dic['criterio'][4][0])+')'
+	row['criteria_5']=str(dic['criterio'][5][1]) +' ('+str(dic['criterio'][5][0])+')'
+	row['criteria_6']=str(dic['criterio'][6][1]) +' ('+str(dic['criterio'][6][0])+')'
+	row['criteria_7']=str(dic['criterio'][7][1]) +' ('+str(dic['criterio'][7][0])+')'
+	row['criteria_8']=str(dic['criterio'][8][1]) +' ('+str(dic['criterio'][8][0])+')'
+	row['criteria_9']=str(dic['criterio'][9][1]) +' ('+str(dic['criterio'][9][0])+')'
+	row['criteria_10']=str(dic['criterio'][10][1]) +' ('+str(dic['criterio'][10][0])+')'
+	
+	list_to_send.append(row)
 	return list_to_send
 
 		
